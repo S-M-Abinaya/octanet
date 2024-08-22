@@ -1,0 +1,269 @@
+:root{
+    --primary:#e52165;
+    --primary-light:#e521668a;
+    --secondary:#0d1137;
+    --secondary-light:#515681;
+}
+
+::selection{
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.fa-bars {
+    color: aliceblue;
+
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: disc;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.btn{
+    color: white;
+    display: inline-block;
+    background-color: purple;
+    padding: 10px 15px;
+    transition: 300ms;
+}
+.btn:hover{
+    transform:translateY(-10px);
+}
+.flex-design{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+header{
+    min-height: 100vh;
+
+    background:linear-gradient(rgba(173, 171, 171, 0.527),grey),url(clg1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header-content{
+    padding:0 2rem;
+    background-color:var(--secondary) ;
+    margin: auto;
+}
+
+.logo{
+    height: 150px;
+    
+    
+}
+
+.nav-links{
+    display: flex;
+    width: 70%;
+}
+
+.nav-links a{
+    color: whitesmoke;
+
+}
+
+.nav-links li::after{
+    content: '';
+    display: block;
+    background-color: var(--primary);
+    height: 2px;
+    width: 0%;
+    transition: width 300ms;
+}
+
+.nav-links li:hover::after{
+    width: 100%;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.text-centre{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    transition: all 300ms;
+}
+
+.text-centre h1{
+    margin: 1.2rem 0;
+}
+
+.content{
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mb{
+    margin-bottom: 3rem;
+}
+
+.mt{
+    margin-top: 5rem;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.wwa-box{
+    background-color: var(--primary);
+    padding: 20px;
+    margin-left: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+
+
+.wwa-box h3{
+    margin-bottom:5px;
+}
+
+.wwa-box:first-child{
+    margin-left: 0px;
+}
+.wwa-box:hover{
+    box-shadow: 3px 5px 11px 0px black;
+
+}
+
+/*.course{
+    position:relative;
+}
+
+.course .course_img{
+    position: relative;
+    top: 70%;
+}
+.course_img img{
+    display: block;
+}
+
+
+.course .course_img::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: scale(1,0);
+    transform-origin: right;
+    transition: transform 300ms;
+    background-color: rgba(0, 0, 0, 0.52);
+}
+
+.course:hover .course_img::after{
+    transform-origin: left;
+    transform: scale(1);
+}
+
+.course .course_content{
+    position: absolute;
+    top: 180%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    transition: top 300ms;
+    transition-delay: 200ms;
+}
+
+.course:hover .course_content{
+    top:100%;
+}
+
+.course .course_content{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+*/
+
+.fac{
+    background-color: #e52165;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.fac-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fac-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (max-width:711px){
+    .wwa-content{
+        flex-direction: column;
+    }
+    .wwa-box{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .wwa-box:first-child{
+        margin-left: 0px;
+    }
+
+}
+
+@media only screen and (max-width:711px){
+        .nav-links{ 
+            /*display:none;*/
+            position: absolute;
+            flex-direction: column;
+            background-color: var(--secondary-light);
+            right: -20rem;
+            top: 25vh;
+            height: 30vh;
+            width: 0%;
+            padding: 1.5rem 0;
+            transition:all 400ms;
+        }
+        .burger{
+            display:block;
+        }
+
+    }
+    .nav-show{
+            width: 100%;
+            right: 0px;
+    }
+
+    .textareahide{
+        left: -50rem;
+    }
